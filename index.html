@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Typography for Lawyers</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" type="text/css" href="css/globaluts.css" />
+        <link rel="stylesheet" type="text/css" href="css/typography.css" />
+    </head>
+    <body>
+        <nav class="navbar">
+            <a href="index.html">Typography</a>
+            <div class="dropdown">
+                <button class="dropbtn">Text Formatting</button>
+                <div class="dropdown-content">
+                    <a href="mixingfonts.html">Email</a>
+                    <a href="colors.html">Color</a>
+                </div>
+            </div> 
+            <div class="dropdown">
+                <button class="dropbtn">Page Layout</button>
+                <div class="dropdown-content">
+                    <a href="bodytext.html">Body Text</a>
+                    <a href="widow.html">Widow and Orphan</a>
+                </div>
+            </div>
+            <div class="profil">
+                <button class="profilbtn"></button>
+                <div class="dropdown-content">
+                    <a href="#">Lorentius Calvin</a>
+                    <a href="#">01023180011</a>
+                </div>
+            </div>  
+        </nav>    
+        <div class="container">
+        <section>
+            <main>
+                <div class="index1">
+                <h1>Typo-graphy</h1>
+                </div>
+                <a href="#index2" class="getstarted">Get started</a>
+            </main>
+        </section>
+        <section>
+            <div class="index2" id="index2">
+                <h2 class="2judul">
+                    Typography is the visual component of the written word.
+                </h2>
+                <div class="box1">
+                    <div class="mySlides fade">
+                        <img src="mix.jpg" style="width:100%">
+                        <div class="text1"> Email</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="color.jpg" style="width:100%">
+                        <div class="text1">Color</div>
+                    </div>
+                    <div class="mySlides fade">
+                      <img src="body.jpg" style="width:100%">
+                      <div class="text1">Body Text</div>
+                    </div>
+                    <div class="mySlides fade">
+                      <img src="widow.jpg" style="width:100%">
+                      <div class="text1">Widow and Orphan</div>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                    </div>
+                </div>
+                <div class="box1 end"> 
+                    A text is a sequence of words. A text stays the same no matter how it’s rendered.
+                    Consider the sentence “I like pizza.” I can print that text on a piece of paper, or
+                    read it aloud, or save it in a file on my laptop. It’ll be the same text, just rendered
+                    different ways—visually, audibly, digitally.<br>
+                    <br>
+                    But when “I like pizza” is printed, typography gets involved. All visually displayed
+                    text involves typography—whether it’s on paper, a computer screen, or a billboard.<br>
+                    <br>
+                    Is typography an art? That’s like asking if photography is an art. Some
+                    photographers and typographers use techniques that raise their work to the level of
+                    art. But at their core, both photography and typography have a utilitarian function.
+                    The aesthetic component is separate. Being an effective typographer is more about
+                    good skills than good taste. And you can learn the skills.
+                </div>
+            </div>
+        </section>
+        </div>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+    </body>
+</html>
